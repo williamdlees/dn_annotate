@@ -1,5 +1,5 @@
 
-# Annotation pipeline based on IgBlast, Changeo, Tigger and Rabhit
+# Annotation pipeline for DolphinNext/Nextflow based on IgBlast, Changeo, Tigger and Rabhit
 
 ## Capabilities
 
@@ -7,17 +7,27 @@
 - Derives a personalised genotype, which can optionally include inferred alleles not present in the V, D and J germline sets
 - Derives a personaised haplotype using J anchor genes, using any J genes for which 2 alleles are found in the sample
 
+## Requirements
+
+The pipeline is intended to be used under [DolphinNext] (https://dolphinnext.readthedocs.io/en/latest/), although the
+.nf file can be used standalone with [Nextflow] (https://nextflow.io). Using DolphinNext will provide a user interface for defining the pipeline
+parameters, will manage the pipeline execution, and present output files in a convenient form.
+
+The pipeline is executed in the [immcantation-suite container] (https://immcantation.readthedocs.io/en/stable/docker/intro.html) 
+under Docker or Singularity. The pipeline requires version 4.4.0 or above. 
+
 ## Workflow Setup
 
-- The workflow is executed within the Immcantation container.
 - Copy the contents of the 'software' directory to a directory accessible to the machine(s) hosting the workflow.
 - Map this directory to the directory /software within the container.
+- Output and intermediate work files will be created under /home in the container. You will therefore probably want
+to map /home to some suitable point, to provide persistence for these files 
 
 ## Setting Up the Germline Sets
 
 ### Using Germline Sets provided with IgBlast
 
-Germline sets provided with IgBlast can be found in the Immcantation container at /usr/local/share/igblast/database. To use these 
+Germline sets provided with IgBlast can be found within the Immcantation container at /usr/local/share/igblast/database. To use these 
 germline sets, specify the base names of the v, d and j databases as inputs to the workflow. For example, for IMGT human IGH, the 
 inputs would be:
 
