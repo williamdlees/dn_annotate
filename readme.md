@@ -3,19 +3,19 @@
 
 ## Capabilities
 
-- Requires reads that have been run through a pre-processing pipeline such as that provided by [Presto] (https://presto.readthedocs.io/en/stable/), and are provided in a single FASTA file per sample.
+- Requires reads that have been run through a pre-processing pipeline such as that provided by [Presto](https://presto.readthedocs.io/en/stable/), and are provided in a single FASTA file per sample.
 - Will work either with germline sets distributed with IgBLAST, or custom germline sets
 - Derives a personalised genotype (V, D and J are personalised), which can optionally include inferred alleles not present in the V, D and J germline sets
 - Derives a personaised haplotype using J anchor genes, using any J genes for which 2 alleles are found in the sample
-- Provides annotated reads in [MiAIRR Rearrangement format] (https://docs.airr-community.org/en/stable/datarep/rearrangements.html), where calls are based on the personalised genotype.
+- Provides annotated reads in [MiAIRR Rearrangement format](https://docs.airr-community.org/en/stable/datarep/rearrangements.html), where calls are based on the personalised genotype.
 
 ## Requirements
 
-The pipeline is intended to be used under [DolphinNext] (https://dolphinnext.readthedocs.io/en/latest/), although the
-.nf file can be used standalone with [Nextflow] (https://nextflow.io). Using DolphinNext will provide a user interface for defining the pipeline
+The pipeline is intended to be used under [DolphinNext](https://dolphinnext.readthedocs.io/en/latest/), although the
+.nf file can be used standalone with [Nextflow](https://nextflow.io). Using DolphinNext will provide a user interface for defining the pipeline
 parameters, will manage the pipeline execution, and present output files in a convenient form.
 
-The pipeline is executed in the [immcantation-suite container] (https://immcantation.readthedocs.io/en/stable/docker/intro.html) 
+The pipeline is executed in the [immcantation-suite container](https://immcantation.readthedocs.io/en/stable/docker/intro.html) 
 under Docker or Singularity. The pipeline requires version 4.4.0 or above. 
 
 ## Workflow Setup
@@ -40,7 +40,7 @@ j: database/imgt_human_ig_j
 An IMGT-gapped V database is also required for the workflow. V-gapped databases are not distributed with IgBlast, but can, for example,
 be downloaded from IMGT. The V-gapped database must contain all sequences in the ungapped database. It  doesn't matter if it contains 
 other sequences, although they will not be used. If you do not have a gapped database covering all the sequences in the ungapped database,
-you can generate one using the gap_sequences tool in the [receptor-utils package] (https://williamdlees.github.io/receptor_utils/_build/html/index.html).
+you can generate one using the gap_sequences tool in the [receptor-utils package](https://williamdlees.github.io/receptor_utils/_build/html/index.html).
 Please note that the gapped germline set MUST conform to the 'standard' IMGT alignment with no insertions or deletions: in other words, 
 the second conserved cysteine must be at codon 104: this is a requirement of the Changeo package and many other .downstream tools. 
 Unfortunately IMGT's gapped macaque IG sets have additional insertions and do not meet this requirement. If the gapped set you wish
@@ -55,7 +55,7 @@ igblast_aux: these will be configured automatically by IgBlast, based on the spe
 
 ### Using Other Germline Sets
 
-Please refer to [these notes] (https://williamdlees.github.io/receptor_utils/_build/html/custom_igblast.html) for guidance on the use of custom 
+Please refer to [these notes](https://williamdlees.github.io/receptor_utils/_build/html/custom_igblast.html) for guidance on the use of custom 
 sets with IgBlast.
 
 Within the pipeline, you can upload the four required reference sets (see notes above on the gapped V reference set). You can use a 
