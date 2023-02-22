@@ -33,18 +33,18 @@ Germline sets provided with IgBlast can be found within the Immcantation contain
 germline sets, specify the base names of the v, d and j databases as inputs to the workflow. For example, for IMGT human IGH, the 
 inputs would be:
 
-v: database/imgt_human_ig_v
-d: database/imgt_human_ig_d
-j: database/imgt_human_ig_j
+- database/imgt_human_ig_v
+- database/imgt_human_ig_d
+- database/imgt_human_ig_j
 
 An IMGT-gapped V database is also required for the workflow. V-gapped databases are not distributed with IgBlast, but can, for example,
 be downloaded from IMGT. The V-gapped database must contain all sequences in the ungapped database. It  doesn't matter if it contains 
 other sequences, although they will not be used. If you do not have a gapped database covering all the sequences in the ungapped database,
-you can generate one using the gap_sequences tool in the [receptor-utils package](https://williamdlees.github.io/receptor_utils/_build/html/index.html).
+you can generate one using the `gap_sequences` tool in the [receptor-utils package](https://williamdlees.github.io/receptor_utils/_build/html/index.html).
 Please note that the gapped germline set MUST conform to the 'standard' IMGT alignment with no insertions or deletions: in other words, 
 the second conserved cysteine must be at codon 104: this is a requirement of the Changeo package and many other .downstream tools. 
 Unfortunately IMGT's gapped macaque IG sets have additional insertions and do not meet this requirement. If the gapped set you wish
-to use is not conformant, it will need to be fixed up either by hand, or a new set generated with use of the gap_sequence tool, if
+to use is not conformant, it will need to be fixed up either by hand, or a new set generated with use of the `gap_sequence` tool, if
 you can find an older reference set that is properly gapped, to use as a model.
 
 IgBlast requires a D reference set to be speified for light chain analysis, although it is not used.
@@ -80,6 +80,8 @@ fasta.
 The sample_limit parameter to the downsize process specifies the maximum number of sequences per assigned V-allele that should be passed to
 sample_clones for clustering. The changeo clustering algorithm is memory intensive: too high a setting can result in long run times and memory
 saturation. We recommend leaving this at the default of 2000 in most circumstances.
+
+detailed_logs controls whether detailed logs should be created by MakeDb. 
 
 infer_novel_alleles' controls whether Tigger should infer alleles that were not defined in the reference set.
 
