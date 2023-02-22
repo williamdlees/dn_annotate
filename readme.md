@@ -1,11 +1,13 @@
 
-# Annotation pipeline for DolphinNext/Nextflow based on IgBlast, Changeo, Tigger and Rabhit
+# AIRR-seq annotation pipeline for DolphinNext/Nextflow based on IgBlast, Changeo, Tigger and Rabhit
 
 ## Capabilities
 
+- Requires reads that have been run through a pre-processing pipeline such as that provided by [Presto] (https://presto.readthedocs.io/en/stable/), and are provided in a single FASTA file per sample.
 - Will work either with germline sets distributed with IgBLAST, or custom germline sets
-- Derives a personalised genotype, which can optionally include inferred alleles not present in the V, D and J germline sets
+- Derives a personalised genotype (V, D and J are personalised), which can optionally include inferred alleles not present in the V, D and J germline sets
 - Derives a personaised haplotype using J anchor genes, using any J genes for which 2 alleles are found in the sample
+- Provides annotated reads in [MiAIRR Rearrangement format] (https://docs.airr-community.org/en/stable/datarep/rearrangements.html), where calls are based on the personalised genotype.
 
 ## Requirements
 
