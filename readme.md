@@ -84,7 +84,7 @@ Provide the reads as an input parameter. If you have multiple repertoires to pro
 does not support sets of FASTA files directly, when you specify a set, set the File Type as FASTQ and set the Filename Extension (two boxes below) as 
 fasta.
 
-![Specify FASTA](specify FASTA.png)
+![Specify FASTA](specify_fasta.png)
 
 `sample_limit` specifies the maximum number of sequences per assigned V-allele that should be passed to
 sample_clones for clustering. The changeo clustering algorithm is memory intensive: too high a setting can result in long run times and memory
