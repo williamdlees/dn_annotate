@@ -42,10 +42,10 @@ be downloaded from IMGT. The V-gapped database must contain all sequences in the
 other sequences, although they will not be used. If you do not have a gapped database covering all the sequences in the ungapped database, 
 you can generate one using the `gap_sequences` tool in the [receptor-utils package](https://williamdlees.github.io/receptor_utils/_build/html/index.html).
 Please note that the gapped germline set MUST conform to the 'standard' IMGT alignment with no insertions or deletions: in other words, 
-the second conserved cysteine must be at codon 104: this is a requirement of the Changeo package and many other .downstream tools. 
+the second conserved cysteine must be at codon 104: this is a requirement of the Changeo package and many other downstream tools. 
 Unfortunately IMGT's gapped macaque IG sets have additional insertions and do not meet this requirement. If the gapped set you wish
 to use is not conformant, it will need to be fixed up either by hand, or a new set generated with use of the `gap_sequence` tool, if
-you can find an older reference set that is properly gapped, to use as a model. the gapped V database should be uploaded using DolphinNext.
+you can find an older reference set that is properly gapped to use as a model. the gapped V database should be uploaded using DolphinNext.
 
 IgBlast requires a D reference set to be speified for light chain analysis, although it is not used.
 
@@ -58,9 +58,9 @@ igblast_aux: these will be configured automatically by IgBlast, based on the spe
 Please refer to [these notes](https://williamdlees.github.io/receptor_utils/_build/html/custom_igblast.html) for guidance on the use of custom 
 sets with IgBlast.
 
-Within the pipeline, you can upload the four required reference sets (see notes above on the gapped V reference set). You can use a 
+Within the pipeline, you can upload the four required reference sets (see notes in the previous section on the gapped V reference set). You can use a 
 mix of sets distributed with IgBlast and others: for example you could specify a custom V and use D and J sets provided by IgBlast. Just follow 
-the guidance above for the IgBLAST sets, and upload files for the other sets.
+the guidance in the previous section for the IgBLAST sets, and upload files for the other sets.
 
 The IgBlast ndm and aux files define the layout of the V and J genes respectively. For V genes, if the species is covered in the IgBlast distribution,
 the ndm file in the distribution can generally be used and you do not need to specify an ndm file: just leave it unspecified and ensure that the
