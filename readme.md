@@ -22,8 +22,7 @@ under Docker or Singularity. The pipeline requires version 4.4.0 or above.
 
 - Copy the contents of the 'software' directory to a directory accessible to the machine(s) hosting the workflow.
 - Map this directory to the directory /software within the container.
-- Output and intermediate work files will be created under /home in the container. You will therefore probably want
-to map /home to some suitable point, to provide persistence for these files 
+- Example DolphinNext settings for human and macaque workflows are given in human/settings.png and macaque/settings.png. Human settings use germline sets distributed with IgBlast, while the macaque sets are from [kimdb](http://kimdb.gkhlab.se/).
 
 ## Setting Up the Germline Sets
 
@@ -77,15 +76,15 @@ Provide the reads as an input parameter. If you have multiple repertoires to pro
 does not support sets of FASTA files directly, when you specify a set, set the File Type as FASTQ and set the Filename Extension (two boxes below) as 
 fasta.
 
-The sample_limit parameter to the downsize process specifies the maximum number of sequences per assigned V-allele that should be passed to
+`sample_limit` specifies the maximum number of sequences per assigned V-allele that should be passed to
 sample_clones for clustering. The changeo clustering algorithm is memory intensive: too high a setting can result in long run times and memory
 saturation. We recommend leaving this at the default of 2000 in most circumstances.
 
-detailed_logs controls whether detailed logs should be created by MakeDb. 
+`detailed_logs` controls whether detailed logs should be created by MakeDb. 
 
-infer_novel_v_alleles' controls whether Tigger should infer V alleles that were not defined in the reference set.
+`infer_novel_v_alleles` controls whether Tigger should infer V alleles that were not defined in the reference set.
 
-CPU can be set to match the capacity of your servers, bearing in mind that too high a setting can overload memory.
+`CPU` can be set to match the capacity of your servers, bearing in mind that too high a setting can overload memory.
 
 
 
