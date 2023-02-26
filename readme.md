@@ -39,7 +39,7 @@ inputs would be:
 
 An IMGT-gapped V database is also required for the workflow. V-gapped databases are not distributed with IgBlast, but can, for example,
 be downloaded from IMGT. The V-gapped database must contain all sequences in the ungapped database. It  doesn't matter if it contains 
-other sequences, although they will not be used. If you do not have a gapped database covering all the sequences in the ungapped database,ungenot
+other sequences, although they will not be used. If you do not have a gapped database covering all the sequences in the ungapped database, 
 you can generate one using the `gap_sequences` tool in the [receptor-utils package](https://williamdlees.github.io/receptor_utils/_build/html/index.html).
 Please note that the gapped germline set MUST conform to the 'standard' IMGT alignment with no insertions or deletions: in other words, 
 the second conserved cysteine must be at codon 104: this is a requirement of the Changeo package and many other .downstream tools. 
