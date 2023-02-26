@@ -1,0 +1,19 @@
+         START> MakeDB
+       COMMAND> igblast
+  ALIGNER_FILE> SC-2_PRCONS-IGM.txt
+      SEQ_FILE> SC-2_PRCONS-IGM.fasta
+       ASIS_ID> False
+    ASIS_CALLS> False
+      VALIDATE> strict
+      EXTENDED> True
+INFER_JUNCTION> False
+
+PROGRESS> 09:21:38 |Loading files       | 0.0 minPROGRESS> 09:21:38 |Done                | 0.0 min
+
+PROGRESS> 09:21:38 |                    |   0% (    0) 0.0 minPROGRESS> 09:21:52 |#                   |   5% (  214) 0.2 minPROGRESS> 09:21:52 |##                  |  10% (  428) 0.2 minPROGRESS> 09:21:52 |###                 |  15% (  642) 0.2 minPROGRESS> 09:21:52 |####                |  20% (  856) 0.2 minPROGRESS> 09:21:52 |#####               |  25% (1,070) 0.2 minPROGRESS> 09:21:52 |######              |  30% (1,284) 0.2 minPROGRESS> 09:21:52 |#######             |  35% (1,498) 0.2 minPROGRESS> 09:21:53 |########            |  40% (1,712) 0.2 minPROGRESS> 09:21:53 |#########           |  45% (1,926) 0.2 minPROGRESS> 09:21:53 |##########          |  50% (2,140) 0.3 minPROGRESS> 09:21:53 |###########         |  55% (2,354) 0.3 minPROGRESS> 09:21:53 |############        |  60% (2,568) 0.3 minPROGRESS> 09:21:54 |#############       |  65% (2,782) 0.3 minPROGRESS> 09:21:54 |##############      |  70% (2,996) 0.3 minPROGRESS> 09:21:54 |###############     |  75% (3,210) 0.3 minPROGRESS> 09:21:54 |################    |  80% (3,424) 0.3 minPROGRESS> 09:21:54 |#################   |  85% (3,638) 0.3 minPROGRESS> 09:21:54 |##################  |  90% (3,852) 0.3 minPROGRESS> 09:21:55 |################### |  95% (4,066) 0.3 minPROGRESS> 09:21:55 |####################| 100% (4,272) 0.3 min
+
+OUTPUT> SC-2_PRCONS-IGM.tsv
+  PASS> 4006
+  FAIL> 266
+   END> MakeDb
+

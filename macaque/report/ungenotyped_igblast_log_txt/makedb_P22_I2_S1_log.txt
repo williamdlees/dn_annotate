@@ -1,0 +1,19 @@
+         START> MakeDB
+       COMMAND> igblast
+  ALIGNER_FILE> P22_I2_S1.txt
+      SEQ_FILE> P22_I2_S1.fasta
+       ASIS_ID> False
+    ASIS_CALLS> False
+      VALIDATE> strict
+      EXTENDED> True
+INFER_JUNCTION> False
+
+PROGRESS> 18:13:04 |Loading files       | 0.0 minPROGRESS> 18:13:10 |Done                | 0.1 min
+
+PROGRESS> 18:13:10 |                    |   0% (      0) 0.0 minPROGRESS> 18:13:36 |#                   |   5% ( 11,638) 0.4 minPROGRESS> 18:13:47 |##                  |  10% ( 23,276) 0.6 minPROGRESS> 18:13:58 |###                 |  15% ( 34,914) 0.8 minPROGRESS> 18:14:09 |####                |  20% ( 46,552) 1.0 minPROGRESS> 18:14:20 |#####               |  25% ( 58,190) 1.2 minPROGRESS> 18:14:32 |######              |  30% ( 69,828) 1.4 minPROGRESS> 18:14:43 |#######             |  35% ( 81,466) 1.5 minPROGRESS> 18:14:54 |########            |  40% ( 93,104) 1.7 minPROGRESS> 18:15:06 |#########           |  45% (104,742) 1.9 minPROGRESS> 18:15:17 |##########          |  50% (116,380) 2.1 minPROGRESS> 18:15:28 |###########         |  55% (128,018) 2.3 minPROGRESS> 18:15:39 |############        |  60% (139,656) 2.5 minPROGRESS> 18:15:50 |#############       |  65% (151,294) 2.7 minPROGRESS> 18:16:01 |##############      |  70% (162,932) 2.9 minPROGRESS> 18:16:12 |###############     |  75% (174,570) 3.0 minPROGRESS> 18:16:24 |################    |  80% (186,208) 3.2 minPROGRESS> 18:16:34 |#################   |  85% (197,846) 3.4 minPROGRESS> 18:16:45 |##################  |  90% (209,484) 3.6 minPROGRESS> 18:16:56 |################### |  95% (221,122) 3.8 minPROGRESS> 18:17:08 |####################| 100% (232,742) 4.0 min
+
+OUTPUT> P22_I2_S1.tsv
+  PASS> 229942
+  FAIL> 2800
+   END> MakeDb
+
