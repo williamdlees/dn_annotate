@@ -15,7 +15,7 @@ The pipeline is intended to be used under [DolphinNext](https://dolphinnext.read
 .nf file can be used standalone with [Nextflow](https://nextflow.io). Using DolphinNext will provide a user interface for defining the pipeline
 parameters, will manage the pipeline execution, and present output files in a convenient form.
 
-The pipeline is executed in the [immcantation-suite container](https://immcantation.readthedocs.io/en/stable/docker/intro.html) 
+Processes are executed in the [immcantation-suite container](https://immcantation.readthedocs.io/en/stable/docker/intro.html) 
 under Docker or Singularity. The pipeline requires version 4.4.0 or above. 
 
 ## Workflow Setup
@@ -29,7 +29,8 @@ under Docker or Singularity. The pipeline requires version 4.4.0 or above.
 ### Using Germline Sets provided with IgBlast
 
 Germline sets provided with IgBlast can be found within the Immcantation container at /usr/local/share/igblast/database. To use these 
-germline sets, specify the base names of the v, d and j databases as inputs to the workflow. For example, for IMGT human IGH, the 
+germline sets, specify the base names of the v, d and j databases as inputs to the workflow. Specify these using the `Manually` tab in DolphinNext file picker,
+rather than uploading any files. For example, for IMGT human IGH, the 
 inputs would be:
 
 - database/imgt_human_ig_v
@@ -44,7 +45,7 @@ Please note that the gapped germline set MUST conform to the 'standard' IMGT ali
 the second conserved cysteine must be at codon 104: this is a requirement of the Changeo package and many other .downstream tools. 
 Unfortunately IMGT's gapped macaque IG sets have additional insertions and do not meet this requirement. If the gapped set you wish
 to use is not conformant, it will need to be fixed up either by hand, or a new set generated with use of the `gap_sequence` tool, if
-you can find an older reference set that is properly gapped, to use as a model.
+you can find an older reference set that is properly gapped, to use as a model. the gapped V database should be uploaded using DolphinNext.
 
 IgBlast requires a D reference set to be speified for light chain analysis, although it is not used.
 
