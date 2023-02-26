@@ -18,6 +18,8 @@ parameters, will manage the pipeline execution, and present output files in a co
 Processes are executed in the [immcantation-suite container](https://immcantation.readthedocs.io/en/stable/docker/intro.html) 
 under Docker or Singularity. The pipeline requires version 4.4.0 or above. 
 
+![Workflow](workflow.png)
+
 ## Workflow Setup
 
 - Copy the contents of the 'software' directory to a directory accessible to the machine(s) hosting the workflow.
@@ -30,8 +32,11 @@ under Docker or Singularity. The pipeline requires version 4.4.0 or above.
 
 Germline sets provided with IgBlast can be found within the Immcantation container at /usr/local/share/igblast/database. To use these 
 germline sets, specify the base names of the v, d and j databases as inputs to the workflow. Specify these using the `Manually` tab in DolphinNext file picker,
-rather than uploading any files. For example, for IMGT human IGH, the 
-inputs would be:
+by specifying the file path, rather than uploading any files. 
+
+![Manual file path specification](file_manually.png)
+
+For example, for IMGT human IGH, the inputs would be:
 
 - database/imgt_human_ig_v
 - database/imgt_human_ig_d
@@ -46,6 +51,8 @@ the second conserved cysteine must be at codon 104: this is a requirement of the
 Unfortunately IMGT's gapped macaque IG sets have additional insertions and do not meet this requirement. If the gapped set you wish
 to use is not conformant, it will need to be fixed up either by hand, or a new set generated with use of the `gap_sequence` tool, if
 you can find an older reference set that is properly gapped to use as a model. the gapped V database should be uploaded using DolphinNext.
+
+![File upload](file_upload.png)
 
 IgBlast requires a D reference set to be speified for light chain analysis, although it is not used.
 
